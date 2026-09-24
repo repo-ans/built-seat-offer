@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { navLinks } from "@/lib/data";
 
 export default function Footer() {
@@ -40,12 +41,20 @@ export default function Footer() {
           <span className="font-mono text-xs uppercase tracking-widest text-ink-soft">
             Legal
           </span>
-          <a href="#" className="text-sm text-ink-soft transition-colors hover:text-ink">
+          <Link
+            href="/privacy-policy"
+            data-cursor="hover"
+            className="text-sm text-ink-soft transition-colors hover:text-ink"
+          >
             Privacy Policy
-          </a>
-          <a href="#" className="text-sm text-ink-soft transition-colors hover:text-ink">
-            Cookie Policy
-          </a>
+          </Link>
+          <Link
+            href="/terms"
+            data-cursor="hover"
+            className="text-sm text-ink-soft transition-colors hover:text-ink"
+          >
+            Terms of Service
+          </Link>
         </div>
       </div>
 

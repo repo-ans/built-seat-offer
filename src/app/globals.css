@@ -25,6 +25,11 @@
   cursor: none;
 }
 
+.lead-form input,
+.lead-form textarea {
+  cursor: text;
+}
+
 @media (hover: none), (pointer: coarse) {
   * {
     cursor: auto;

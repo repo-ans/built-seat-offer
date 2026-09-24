@@ -1,3 +1,13 @@
+// Single source of truth for contact details shown on the legal pages.
+export const company = {
+  brand: "AniyaNetworks",
+  operator: "Aniya Network Solutions Inc.",
+  email: "hello@example.com",
+  phone: "(437) 777-8844",
+  addressLines: ["40 Anglerock Drive, Cambridge, Ontario N1T1L8, Canada"],
+  legalEffectiveDate: "September 24, 2026",
+};
+
 export const navLinks = [
   { label: "Why Us", href: "#why-us" },
   { label: "What We Build", href: "#what-we-build" },
