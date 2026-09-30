@@ -10,7 +10,7 @@ import {
   useMotionValue,
   useReducedMotion,
 } from "framer-motion";
-import { whatWeBuild } from "@/lib/data";
+import { company, whatWeBuild } from "@/lib/data";
 
 type Values = {
   first_name: string;
@@ -444,12 +444,12 @@ export default function LeadForm() {
                         <div className="grid gap-4">
                           <Consent checked={consentMarketing} onChange={setConsentMarketing}>
                             I consent to receive marketing text messages about special offers, discounts, and
-                            service updates from AniyaNetworks at the phone number provided. Message frequency
+                            service updates from {company.brand} at the phone number provided. Message frequency
                             may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP
                             to opt out.
                           </Consent>
                           <Consent checked={consentNonMarketing} onChange={setConsentNonMarketing}>
-                            I consent to receive non-marketing text messages from AniyaNetworks about project
+                            I consent to receive non-marketing text messages from {company.brand} about project
                             scoping, appointment reminders, and service notifications. Message frequency may
                             vary, message &amp; data rates may apply. Text HELP for assistance, reply STOP to
                             opt out.
@@ -536,11 +536,23 @@ export default function LeadForm() {
               </div>
 
               <p className="mt-5 text-center text-xs text-ink-soft">
-                <Link href="/privacy-policy" data-cursor="hover" className="underline-offset-4 transition-colors hover:text-accent hover:underline">
+                <Link
+                  href="/privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cursor="hover"
+                  className="underline-offset-4 transition-colors hover:text-accent hover:underline"
+                >
                   Privacy Policy
                 </Link>
                 <span className="mx-2 opacity-50">|</span>
-                <Link href="/terms" data-cursor="hover" className="underline-offset-4 transition-colors hover:text-accent hover:underline">
+                <Link
+                  href="/terms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cursor="hover"
+                  className="underline-offset-4 transition-colors hover:text-accent hover:underline"
+                >
                   Terms of Service
                 </Link>
               </p>

@@ -1,3 +1,5 @@
+import { company } from "@/lib/data";
+
 type LeadPayload = {
   first_name: string;
   last_name: string;
@@ -73,7 +75,7 @@ export async function POST(request: Request) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         ...lead,
-        source: "AniyaNetworks landing page",
+        source: `${company.brand} landing page`,
         submitted_at: new Date().toISOString(),
       }),
       signal: AbortSignal.timeout(10_000),

@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
+import { company } from "@/lib/data";
 
 const inter = Inter({
   variable: "--font-body",
@@ -23,7 +24,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AniyaNetworks — White-Label Technical Build Team",
+  metadataBase: new URL(`https://${company.domain}`),
+  title: `${company.brand} — White-Label Technical Build Team`,
   description:
     "A dedicated technical builder, backed by QA and a full team, working white-label inside your accounts. GoHighLevel, Make, n8n, Zapier, websites, and AI agents — architected and delivered. You keep the client. We build.",
 };

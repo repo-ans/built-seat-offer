@@ -1,8 +1,9 @@
 // Single source of truth for contact details shown on the legal pages.
 export const company = {
-  brand: "AniyaNetworks",
+  brand: "BuildPartner",
   operator: "Aniya Network Solutions Inc.",
-  email: "hello@example.com",
+  domain: "buildpartner.cc",
+  email: "hello@buildpartner.cc",
   phone: "(437) 777-8844",
   addressLines: ["40 Anglerock Drive, Cambridge, Ontario N1T1L8, Canada"],
   legalEffectiveDate: "September 24, 2026",

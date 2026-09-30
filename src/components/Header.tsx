@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { navLinks } from "@/lib/data";
+import { company, navLinks } from "@/lib/data";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,7 +26,7 @@ export default function Header() {
           data-cursor="hover"
           className="font-display text-lg font-semibold tracking-tight"
         >
-          AniyaNetworks
+          {company.brand}
         </a>
 
         <nav className="hidden items-center gap-10 md:flex">

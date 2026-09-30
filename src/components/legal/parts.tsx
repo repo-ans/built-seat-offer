@@ -111,7 +111,12 @@ export function ContactCard() {
 
 export function InlineLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <Link href={href} className="text-accent underline underline-offset-4 hover:brightness-110">
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-accent underline underline-offset-4 hover:brightness-110"
+    >
       {children}
     </Link>
   );
@@ -134,10 +139,20 @@ function LegalFooter() {
 
         <div className="flex flex-col gap-3 text-sm text-ink-soft">
           <span className="font-mono text-xs uppercase tracking-widest">Legal</span>
-          <Link href="/privacy-policy" className="transition-colors hover:text-ink">
+          <Link
+            href="/privacy-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-ink"
+          >
             Privacy Policy
           </Link>
-          <Link href="/terms" className="transition-colors hover:text-ink">
+          <Link
+            href="/terms"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-ink"
+          >
             Terms of Service
           </Link>
         </div>
