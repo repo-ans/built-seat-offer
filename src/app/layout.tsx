@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   title: `${company.brand} — White-Label Technical Build Team`,
   description:
     "A dedicated technical builder, backed by QA and a full team, working white-label inside your accounts. GoHighLevel, Make, n8n, Zapier, websites, and AI agents — architected and delivered. You keep the client. We build.",
+  verification: {
+    google: "wFToSBKTuJHocxBW9xo5xSbKzqoq1Z8V5gF5Pm3pong",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
