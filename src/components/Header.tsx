@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { company, navLinks } from "@/lib/data";
+import { navLinks } from "@/lib/data";
+import Logo from "./Logo";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,17 +17,13 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-canvas/85 backdrop-blur-md border-b border-line" : ""
+      className={`fixed inset-x-0 top-0 z-50 px-6 transition-all duration-500 md:px-12 ${
+        scrolled ? "bg-canvas border-b border-line" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-12">
-        <a
-          href="#top"
-          data-cursor="hover"
-          className="font-display text-lg font-semibold tracking-tight"
-        >
-          {company.brand}
+      <div className="mx-auto flex max-w-7xl items-center justify-between py-2">
+        <a href="#top" data-cursor="hover" className="flex items-center">
+          <Logo className="h-20 w-auto sm:h-24" priority />
         </a>
 
         <nav className="hidden items-center gap-10 md:flex">

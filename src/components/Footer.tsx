@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { company, navLinks } from "@/lib/data";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
     <footer className="border-t border-line px-6 py-16 md:px-12">
       <div className="mx-auto flex max-w-7xl flex-col gap-12 md:flex-row md:justify-between">
         <div>
-          <p className="font-display text-2xl tracking-tight">{company.brand}</p>
+          <Logo className="h-24 w-auto sm:h-28" />
           <p className="mt-3 max-w-xs text-sm text-ink-soft">
             White-label technical build team. Builder, QA, and support behind
             every seat.

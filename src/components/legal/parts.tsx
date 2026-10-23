@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { company } from "@/lib/data";
+import Logo from "@/components/Logo";
 
 export function LegalShell({
   title,
@@ -10,10 +11,10 @@ export function LegalShell({
 }) {
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-canvas/85 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12">
-          <Link href="/" data-cursor="hover" className="font-display text-lg font-semibold tracking-tight">
-            {company.brand}
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-canvas/85 px-6 backdrop-blur-md md:px-12">
+        <div className="mx-auto flex max-w-7xl items-center justify-between py-5">
+          <Link href="/" data-cursor="hover" className="flex items-center">
+            <Logo className="h-20 w-auto sm:h-24" priority />
           </Link>
           <Link
             href="/#book"
